@@ -8,7 +8,79 @@
 </head>
 <body>
     <form enctype="multipart/form-data" action="index.html" method="get">
-        <!-- FORM FIELDS HERE -->
-    </form>
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" pattern=".*@cicc\.ca" required>
+        
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" pattern=".{8,}" title="Password must be at least 8 characters long" required>
+        
+                <label for="date-of-birth">Date of Birth:</label>
+                <input type="date" id="date-of-birth" name="date-of-birth" required>
+            </fieldset>
+        
+            <fieldset>
+                <legend>Preferences</legend>
+                <label for="color">Favorite Color:</label>
+                <input type="color" id="color" name="color">
+        
+                <label for="hobby">Hobby:</label>
+                <input type="text" id="hobby" name="hobby">
+        
+                <label for="experience">Experience Level:</label>
+                <input type="range" id="experience" name="experience" min="1" max="10">
+            </fieldset>
+        
+            <fieldset>
+                <legend>Contact Preferences</legend>
+                <label for="contact-method">Preferred Contact Method:</label>
+                <select id="contact-method" name="contact-method">
+                    <option value="email">Email</option>
+                    <option value="phone">Phone</option>
+                    <option value="mail">Mail</option>
+                </select>
+        
+                <label for="newsletter">
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    Subscribe to Newsletter
+                </label>
+            </fieldset>
+        
+            <fieldset>
+                <legend>Preferences</legend>
+                <label>Gender:</label>
+                <label for="male">
+                    <input type="radio" id="male" name="gender" value="male"> Male
+                </label>
+                <label for="female">
+                    <input type="radio" id="female" name="gender" value="female"> Female
+                </label>
+                <label for="other">
+                    <input type="radio" id="other" name="gender" value="other"> Other
+                </label>
+            </fieldset>
+        
+            <fieldset>
+                <legend>More Information</legend>
+                <label for="bio">Bio:</label>
+                <textarea id="bio" name="bio" rows="4"></textarea>
+            </fieldset>
+        
+            <fieldset>
+                <legend>Upload Documents</legend>
+                <label for="resume">Resume and other certificates:</label>
+                <input type="file" id="resume" name="resume" multiple>
+            </fieldset>
+        
+            <fieldset>
+                <legend>Submission</legend>
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+            </fieldset>
+        </form>
 </body>
 </html>
